@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 416554922}
   - component: {fileID: 416554921}
   - component: {fileID: 416554920}
+  - component: {fileID: 416554925}
   m_Layer: 0
   m_Name: Cue Ball
   m_TagString: Untagged
@@ -334,6 +335,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416554925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416554919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac7dd1cab584f4699becce51f18881d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 0.6392157, g: 0.30980393, b: 0.33333334, a: 1}
 --- !u!1 &421704765
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +405,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 53
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -441,8 +455,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493800238}
-  m_LocalRotation: {x: 0, y: 0.98037475, z: 0, w: -0.19714302}
-  m_LocalPosition: {x: 0.25527403, y: -0.001, z: 0.4691346}
+  m_LocalRotation: {x: 0, y: -0.7183955, z: 0, w: 0.6956349}
+  m_LocalPosition: {x: 0.561741, y: -0.001, z: 0.024092145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -463,6 +477,7 @@ GameObject:
   - component: {fileID: 717895831}
   - component: {fileID: 717895830}
   - component: {fileID: 717895829}
+  - component: {fileID: 717895834}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -557,13 +572,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717895828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.022, y: 0.062, z: 0.268}
+  m_LocalPosition: {x: -0.022, y: 0.0621, z: 0.268}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717895834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717895828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2565ac70b9a4b5da3aff5ee5f040601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1063466417
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,8 +919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cue: {fileID: 493800242}
   _cueBall: {fileID: 416554924}
-  _force: 1
+  _force: 50
   _cueDistanceToBall: 0.5
+  _forceMode: 0
 --- !u!1 &1586487948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1211,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773676906}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1844314271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844314272}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1844314272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844314271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.25800273, y: 0.33537406, z: 0.36240968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942056941
 GameObject:
   m_ObjectHideFlags: 0
