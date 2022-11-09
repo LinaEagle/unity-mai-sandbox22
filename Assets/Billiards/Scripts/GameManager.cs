@@ -20,6 +20,7 @@ namespace Billiards
                 mousePos.z = _camera.farClipPlane;
                 var position = _camera.ScreenToWorldPoint(mousePos);
                 position.y = 0;
+                Debug.Log(position);
                 return position;
             }
         }
@@ -38,7 +39,7 @@ namespace Billiards
             _cue.position = new Vector3(targetCuePosition.x, _cue.position.y, targetCuePosition.z);
             _cue.LookAt(new Vector3(ballPos.x, _cue.position.y, ballPos.z), Vector3.up);
         
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 1)
             {
                 _cueBall.GetComponent<Rigidbody>().AddForce(_cue.forward * _force, _forceMode);
             }
