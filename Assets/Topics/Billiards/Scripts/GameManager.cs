@@ -20,7 +20,7 @@ namespace Billiards
                 mousePos.z = _camera.farClipPlane;
                 var position = _camera.ScreenToWorldPoint(mousePos);
                 position.y = 0;
-                Debug.Log(position);
+                //Debug.Log(position);
                 return position;
             }
         }
