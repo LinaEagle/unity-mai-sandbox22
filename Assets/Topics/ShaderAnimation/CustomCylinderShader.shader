@@ -1,5 +1,9 @@
-Shader "Unlit/NewUnlitShader"
+Shader "Custom/CylinderShader"
 {
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+    }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
@@ -25,9 +29,9 @@ Shader "Unlit/NewUnlitShader"
                 float4 vertex : SV_POSITION;
             };
 
-            float4 _MainTex_ST;
             sampler2D _MainTex;
-            
+            float4 _MainTex_ST;
+
             v2f vert (appdata v)
             {
                 v2f o;
@@ -38,10 +42,10 @@ Shader "Unlit/NewUnlitShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return fixed4(i.uv.xy, 0, 0);
+                
+                fixed4 tex = tex2D(_MainTex, i.uv);
+                return tex;
             }
-
-                       
             ENDCG
         }
     }
